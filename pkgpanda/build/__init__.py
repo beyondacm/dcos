@@ -725,7 +725,6 @@ def build_tree(package_store, mkbootstrap, tree_variants):
         built_packages.setdefault(name, dict())
 
         # Run the build, store the built package path for later use.
-        # TODO(cmaloney): Only build the requested variants, rather than all variants.
         built_packages[name][variant] = build(
             package_store,
             name,
